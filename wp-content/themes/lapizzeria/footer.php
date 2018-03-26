@@ -11,6 +11,9 @@
         <p>8179 Bay Avenue Mountan View, CA 94043</p>
         <p>Teléfono: +1-92-456-7890</p>
     </div>
+    <p class="copyright">
+        Todos los derechos reservados <?php echo date('Y'); ?>
+    </p>
 </footer>
         <?php wp_footer(); ?>
     </body>
