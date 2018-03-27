@@ -16,7 +16,15 @@
             <?php the_content(); ?>
         </main>
     </div>
-    <h2>Las cajas iran aqui!!!</h2>
+    
+<div class="informacion-cajas contenedor">
+    <div class="caja">
+        <img src="<?php the_field('imagen1');?>">
+        <div class="contenido-caja">
+            <?php the_field('texto1');?>
+        </div>
+    </div>
+</div>
 
 <?php endwhile; ?>
 
