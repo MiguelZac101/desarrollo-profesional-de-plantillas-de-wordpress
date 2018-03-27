@@ -19,7 +19,13 @@
     
 <div class="informacion-cajas contenedor">
     <div class="caja">
-        <img src="<?php the_field('imagen1');?>">
+        <?php 
+        $id_imagen = get_field('imagen1');
+        $imagen = wp_get_attachment_image_src($id_imagen,"nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
+        ?>
+        
+        <img src="<?php echo $imagen[0];?>" class="imagen-caja"/>
+        
         <div class="contenido-caja">
             <?php the_field('texto1');?>
         </div>
