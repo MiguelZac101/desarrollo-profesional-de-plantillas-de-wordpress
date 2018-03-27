@@ -297,3 +297,27 @@ footer p.copyright{
     margin-top: 20px;
 }
 
+/**Cajas**/
+.informacion-cajas{
+    display: grid;
+}
+
+.informacion-cajas .caja img{
+    width: 100%; 
+}
+
+@media screen and (min-width:768px){
+    .informacion-cajas{
+        grid-template-columns: repeat(3 ,1fr);
+    }
+}
+.informacion-cajas .caja{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+@media screen and (min-width:768px){
+    .informacion-cajas .caja{
+        grid-template-columns:unset;
+        grid-templates-rows: 1fr 1fr;
+    }
+}

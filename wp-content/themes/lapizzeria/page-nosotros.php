@@ -15,22 +15,49 @@
         <main class="text-centrado contenido-paginas">
             <?php the_content(); ?>
         </main>
+
     </div>
-    
-<div class="informacion-cajas contenedor">
-    <div class="caja">
-        <?php 
-        $id_imagen = get_field('imagen1');
-        $imagen = wp_get_attachment_image_src($id_imagen,"nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
-        ?>
-        
-        <img src="<?php echo $imagen[0];?>" class="imagen-caja"/>
-        
-        <div class="contenido-caja">
-            <?php the_field('texto1');?>
+
+    <div class="informacion-cajas contenedor">
+        <div class="caja">
+            <?php
+            $id_imagen = get_field('imagen1');
+            $imagen = wp_get_attachment_image_src($id_imagen, "nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
+            ?>
+
+            <img src="<?php echo $imagen[0]; ?>" class="imagen-caja"/>
+
+            <div class="contenido-caja">
+                <?php the_field('texto1'); ?>
+            </div>
+        </div>
+        <div class="caja">
+            <?php
+            $id_imagen = get_field('imagen2');
+            $imagen = wp_get_attachment_image_src($id_imagen, "nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
+            ?>
+
+            <img src="<?php echo $imagen[0]; ?>" class="imagen-caja"/>
+
+            <div class="contenido-caja">
+                <?php the_field('texto2'); ?>
+            </div>
+        </div>
+        <div class="caja">
+            <?php
+            $id_imagen = get_field('imagen3');
+            $imagen = wp_get_attachment_image_src($id_imagen, "nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
+            ?>
+
+            <img src="<?php echo $imagen[0]; ?>" class="imagen-caja"/>
+
+            <div class="contenido-caja">
+                <?php the_field('texto3'); ?>
+            </div>
         </div>
     </div>
-</div>
+
+
 
 <?php endwhile; ?>
 
