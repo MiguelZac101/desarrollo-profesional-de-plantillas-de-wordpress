@@ -321,3 +321,21 @@ footer p.copyright{
         grid-templates-rows: 1fr 1fr;
     }
 }
+
+.informacion-cajas .caja:nth-child(1){
+    background-color: #f19f30;
+}
+.informacion-cajas .caja:nth-child(2){
+    background-color: #127427;
+}
+.informacion-cajas .caja:nth-child(3){
+    background-color: #a61206;
+}
+@media screen and (min-width:768px){
+    .informacion-cajas .caja:nth-child(2) img{
+        order: 2;
+    }
+    .informacion-cajas .caja:nth-child(2) div.contenido-caja{
+        order: 1;
+    }
+}
