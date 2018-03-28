@@ -42,3 +42,43 @@ function lapizzeria_menus(){
     ));
 }
 add_action('init','lapizzeria_menus');
+
+//Post Type Especialidades para La Pizzeria
+add_action( 'init', 'lapizzeria_especialidades' );
+function lapizzeria_especialidades() {
+    $labels = array(
+        'name'               => _x( 'Especialidades', 'lapizzeria' ),
+        'singular_name'      => _x( 'Especialidad', 'post type singular name', 'lapizzeria' ),
+        'menu_name'          => _x( 'Especialidades', 'admin menu', 'lapizzeria' ),
+        'name_admin_bar'     => _x( 'Especialidades', 'add new on admin bar', 'lapizzeria' ),
+        'add_new'            => _x( 'Add New', 'book', 'lapizzeria' ),
+        'add_new_item'       => __( 'Add New Pizza', 'lapizzeria' ),
+        'new_item'           => __( 'New Especialidades', 'lapizzeria' ),
+        'edit_item'          => __( 'Edit Especialidades', 'lapizzeria' ),
+        'view_item'          => __( 'View Especialidades', 'lapizzeria' ),
+        'all_items'          => __( 'All Especialidades', 'lapizzeria' ),
+        'search_items'       => __( 'Search Especialidades', 'lapizzeria' ),
+        'parent_item_colon'  => __( 'Parent Especialidades:', 'lapizzeria' ),
+        'not_found'          => __( 'No Especialidadeses found.', 'lapizzeria' ),
+        'not_found_in_trash' => __( 'No Especialidadeses found in Trash.', 'lapizzeria' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'description'        => __( 'Description.', 'lapizzeria' ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'especialidades' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 6,
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies'          => array( 'category' ),
+    );
+
+    register_post_type( 'especialidades', $args );
+}
