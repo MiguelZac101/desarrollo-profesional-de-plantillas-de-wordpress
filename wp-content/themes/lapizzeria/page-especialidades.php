@@ -20,7 +20,7 @@
 <?php endwhile; ?>
 
 <div class="nuestras-especialidades contenedor">
-    <h3 class="">Pizzas</h3>
+    <h3 class="texto-rojo">Pizzas</h3>
     <div class="contenedor-grid">
         <?php
         $args = array(

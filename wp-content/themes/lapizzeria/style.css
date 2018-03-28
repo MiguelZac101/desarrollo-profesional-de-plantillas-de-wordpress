@@ -35,7 +35,9 @@ h3{
 h4{
     font-size: 24px;
 }
-
+.texto-rojo{
+    color:#a61206;
+}
 .text-centrado{
     text-align: center;
 }
@@ -338,4 +340,30 @@ footer p.copyright{
     .informacion-cajas .caja:nth-child(2) div.contenido-caja{
         order: 1;
     }
+}
+
+/** ESPECIALIDADES **/
+
+.nuestras-especialidades{
+    padding: 0 60px;
+}
+div.texto-especialidad{
+    padding: 20px;
+}
+div.texto-especialidad h4 {
+    border-bottom: 1px solid #dfdfdd;
+    padding-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+div.texto-especialidad h4 span {
+    float : right;
+    font-size: 30px;
+    color: #f19f30;
+    font-family: 'Open Sans', sans-serif;
+}
+div.texto-especialidad p {
+    color: #3d3d3d;
+    line-height: 30px;
 }
