@@ -4,7 +4,8 @@ function lapizzeria_setup(){
     //agregar imagen destacada
     add_theme_support('post-thumbnails');
     //agregar medida de miniatura a las imagenes
-    add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen    
+    add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen   
+    add_image_size('especialidades',768,515,true);
 }
 add_action('after_setup_theme','lapizzeria_setup');//(nombre del hook, nombre_de_la_funcion)
 
