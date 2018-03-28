@@ -33,7 +33,7 @@
         $pizzas = new WP_Query($args);
         while ($pizzas->have_posts()): $pizzas->the_post();
             ?>
-            <div class="">
+            <div class="columnas2-4">
                 <?php the_post_thumbnail('especialidades'); ?>
                 <div class="texto-especialidad">
                     <h4><?php the_title();?> <span>$<?php the_field('precio'); ?></span></h4>
@@ -44,7 +44,33 @@
         endwhile;
         wp_reset_postdata();
         ?>
-    </div>
+    </div><!--fin de contenedor grid-->
+    
+    <h3 class="texto-rojo">Otros</h3>
+    <div class="contenedor-grid">
+        <?php
+        $args = array(
+            'post_type' => 'especialidades', // -> register_post_type( 'especialidades', $args ); -> functions.php
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'category_name' => 'otros'
+        );
+        $pizzas = new WP_Query($args);
+        while ($pizzas->have_posts()): $pizzas->the_post();
+            ?>
+            <div class="columnas2-4">
+                <?php the_post_thumbnail('especialidades'); ?>
+                <div class="texto-especialidad">
+                    <h4><?php the_title();?> <span>$<?php the_field('precio'); ?></span></h4>
+                    <?php the_content(); ?>
+                </div>
+            </div>
+            <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
+    </div><!--fin de contenedor grid-->
 
 </div>
 

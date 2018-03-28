@@ -46,6 +46,10 @@ h4{
     width: 100%;
     margin: 0 auto;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /** ENCABEZADO **/
 header.encabezado-sitio {
@@ -366,4 +370,33 @@ div.texto-especialidad h4 span {
 div.texto-especialidad p {
     color: #3d3d3d;
     line-height: 30px;
+}
+
+/** GRID **/
+@media only screen and (min-width:768px){
+    .contenedor-grid{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .contenedor-grid::after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+    [class*="columnas"]{
+        padding: 0 10px;
+        float: left;
+    }
+    .columnas1-4{
+        width: 25%;
+    }
+    .columnas2-4{
+        width: 50%;
+    }
+    .columnas3-4{
+        width: 75%;
+    }
+    .columnas1-3{
+        width: 33.3%;
+    }
 }
