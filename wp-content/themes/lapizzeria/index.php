@@ -18,7 +18,30 @@ $imagen = wp_get_attachment_image_src($id_imagen,'full');//(id_imagen,tamaño)
         <main class="text-centrado contenido-paginas">
             <?php while(have_posts()): the_post(); ?>
             <article class="entrada-blog">
-                <?php the_title(); ?>
+                <a href="<?php the_permalink();?>">
+                    <?php the_post_thumbnail('especialidades');?>
+                </a>
+                <header class="informacion-entrada clear">
+                    <div class="fecha">
+                        <time>
+                            <?php echo the_time('d');?>
+                            <span><?php the_time('M'); ?></span>
+                        </time>
+                    </div>
+                    <div class="titulo-entrada">
+                        <?php the_title('<h2>','</h2>'); ?>
+                        <p class="autor">
+                            <i><?php the_author(); ?></i>
+                        </p>
+                    </div>
+                    <?php the_category(); ?>
+                    <br/>
+                    <?php the_tags(); ?>
+                </header>
+                <div class="contenido-entrada">
+                    <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>" class="button rojo">Leer más</a>
+                </div>
             </article>            
             <?php endwhile; ?>
         </main>
