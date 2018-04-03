@@ -21,7 +21,7 @@
                     <div class="redes-sociales">
                         <?php 
 $args = array(
-    'theme_location' => 'social-menu',
+    'theme_location' => 'social-menu', //nombre del menu , 'social-menu' => __('Social Menu','lapizzeria') --> functions.php
     'container' => 'nav',
     'container_class' => 'sociales',
     'container_id' => 'sociales',

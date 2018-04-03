@@ -34,7 +34,7 @@
         while ($pizzas->have_posts()): $pizzas->the_post();
             ?>
             <div class="columnas2-4">
-                <?php the_post_thumbnail('especialidades'); ?>
+                <?php the_post_thumbnail('especialidades'); //la medida del thumbnail -> add_image_size('especialidades',768,515,true) ->functions.php ?>
                 <div class="texto-especialidad">
                     <h4><?php the_title();?> <span>$<?php the_field('precio'); ?></span></h4>
                     <?php the_content(); ?>

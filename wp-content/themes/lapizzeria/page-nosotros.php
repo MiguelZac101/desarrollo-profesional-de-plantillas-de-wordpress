@@ -21,8 +21,8 @@
     <div class="informacion-cajas contenedor">
         <div class="caja">
             <?php
-            $id_imagen = get_field('imagen1');
-            $imagen = wp_get_attachment_image_src($id_imagen, "nosotros"); // id_imagen,nombre de miniatura (personalizado en functions.php)
+            $id_imagen = get_field('imagen1');//extre el id, en la configuracin panel wp campos personalizados , evuelve el id
+            $imagen = wp_get_attachment_image_src($id_imagen, "nosotros"); // id_imagen,nombre de miniatura , add_image_size('nosotros',437,291,true) -> functions.php
             ?>
 
             <img src="<?php echo $imagen[0]; ?>" class="imagen-caja"/>
