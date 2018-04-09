@@ -15,7 +15,7 @@ $imagen = wp_get_attachment_image_src($id_imagen,'full');//(id_imagen,tamaño)
         </div>
     </div>
     <div class="principal contenedor">
-        <main class="text-centrado contenido-paginas">
+        <main class="text-centrado contenido-paginas columnas2-3">
             <?php while(have_posts()): the_post(); ?>
             <article class="entrada-blog">
                 <a href="<?php the_permalink();?>">
@@ -45,9 +45,10 @@ $imagen = wp_get_attachment_image_src($id_imagen,'full');//(id_imagen,tamaño)
             </article>            
             <?php endwhile; ?>
         </main>
-    </div>
         
-    
+        <?php get_sidebar(); ?>
+        
+    </div>
     
 <?php get_footer(); ?>
     
