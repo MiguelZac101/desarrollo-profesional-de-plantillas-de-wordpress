@@ -435,3 +435,16 @@ aside .widget h3{
     font-size: 24px;
     text-transform: uppercase;
 }
+aside .widget ul{
+    list-style: none;
+}
+aside .widget ul li{
+    margin-bottom: 20px;
+}
+aside .widget ul li a{
+    color: #000;
+    text-decoration: none;
+}
+aside .widget ul li a:hover{
+    color: #f19f30;    
+}
