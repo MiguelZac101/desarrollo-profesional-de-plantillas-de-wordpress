@@ -46,7 +46,13 @@ $imagen = wp_get_attachment_image_src($id_imagen,'full');//(id_imagen,tamaño)
             <?php endwhile; ?>
             
             <div class="paginacion">
-                <?php echo paginate_links(); ?>
+                <?php // echo paginate_links(); ?>
+                <div class="anteriores">
+                    <?php next_posts_link('Anteriores');?>
+                </div>
+                <div class="siguientes">
+                    <?php previous_posts_link('Siguientes');?>
+                </div>
             </div>            
             
         </main>

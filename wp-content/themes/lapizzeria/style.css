@@ -523,3 +523,10 @@ ul.lista-comentarios li.comment ul.children li{
     font-weight: bold;
     color: #333;
 }
+.paginacion .anteriores,
+.paginacion .siguientes{
+    float: left;
+}
+.paginacion .anteriores{
+    margin-right: 20px;
+}
