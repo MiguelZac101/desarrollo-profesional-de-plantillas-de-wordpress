@@ -506,3 +506,20 @@ ul.lista-comentarios li.comment a{
 ul.lista-comentarios li.comment ul.children li{
     background-color: white;
 }
+
+/*PAGINACION*/
+.paginacion{
+    margin-top: 20px;
+    background-color: #e1e1e1;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 20px;
+}
+.paginacion a{
+    color: #a61206;
+    text-decoration: none;
+}
+.paginacion .current{
+    font-weight: bold;
+    color: #333;
+}

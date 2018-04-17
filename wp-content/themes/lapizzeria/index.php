@@ -44,6 +44,11 @@ $imagen = wp_get_attachment_image_src($id_imagen,'full');//(id_imagen,tamaño)
                 </div>
             </article>            
             <?php endwhile; ?>
+            
+            <div class="paginacion">
+                <?php echo paginate_links(); ?>
+            </div>            
+            
         </main>
         
         <?php get_sidebar(); ?>
