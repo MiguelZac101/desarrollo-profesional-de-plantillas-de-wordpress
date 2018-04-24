@@ -27,6 +27,7 @@ function lapizzeria_styles(){
     wp_enqueue_style('style');
     
     //Registrar JS
+    //https://github.com/terrymun/Fluidbox
     wp_register_script('fluidbox',  get_template_directory_uri().'/js/jquery.fluidbox.min.js',array(),'1.0.0',true);
     wp_register_script('scripts',  get_template_directory_uri().'/js/scripts.js',array(),'1.0.0',true);    
     
