@@ -547,3 +547,23 @@ div#gallery-1 .gallery-item .gallery-icon{
 div#gallery-1 img{
     border: none;
 }
+
+/*CONTACTO*/
+.contacto{
+    background-image: url("img/contacto_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+form.reserva-contacto .campo{
+    margin-bottom: 20px;
+    width: 100%;
+}
+form.reserva-contacto .campo input,
+form.reserva-contacto .campo textarea{
+    width: 100%;
+    border: 3px solid black;
+    padding: 20px 10px;
+}
+form.reserva-contacto .campo textarea{
+    height: 200px;
+}
