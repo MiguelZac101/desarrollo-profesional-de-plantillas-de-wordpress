@@ -6,6 +6,12 @@ function lapizzeria_setup(){
     //agregar medida de miniatura a las imagenes
     add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen   
     add_image_size('especialidades',768,515,true);
+    
+    //cambio de medida de la miniatura que viene por defecto en Wordpress
+    update_option('thumbnail_size_w',253);
+    update_option('thumbnail_size_h',164);
+    //medium_size_w
+    //large_size_w
 }
 add_action('after_setup_theme','lapizzeria_setup');//(nombre del hook, nombre_de_la_funcion)
 
