@@ -13,8 +13,9 @@
     </div>
     <div class="principal contenedor contacto">
         <main class="contenido-paginas">
-            <h2>Realizar una reservación</h2>
+            
             <form class="reserva-contacto" method="post">
+                <h2>Realizar una reservación</h2>
                 <div class="campo">
                     <input type="text" name="nombre" placeholder="Nombre" required>
                 </div>
