@@ -16,7 +16,9 @@ function lapizzeria_reservaciones(){
     ?>
 <div class="wrap">
     <h1>Reservaciones</h1>
+
     <table class="wp-list-table widefat fixed striped posts">
+
         <thead>
             <tr>
                 <th class="manage-column">ID</th>
