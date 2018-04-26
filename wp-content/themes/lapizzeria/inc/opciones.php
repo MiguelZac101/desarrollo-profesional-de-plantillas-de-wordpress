@@ -10,6 +10,26 @@ function lapizzeria_ajustes(){
 add_action('admin_menu','lapizzeria_ajustes');
 
 function lapizzeria_opciones(){
+    ?>
+<div class="wrap">
+    <h1>Ajustes La Pizzeria</h1>
+    <form action="options.php" method="post">
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row">Dirección</th>
+                <td><input type="text" name="lapizzeria_direccion" value="" ></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Teléfono</th>
+                <td><input type="text" name="lapizzeria_telefono" value="" ></td>
+            </tr>
+        </table>
+        
+        <?php submit_button(); ?>
+        
+    </form>
+</div>
+    <?php
     
 }
 function lapizzeria_reservaciones(){
