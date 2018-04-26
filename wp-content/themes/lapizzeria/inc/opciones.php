@@ -28,11 +28,11 @@ function lapizzeria_opciones(){
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">Dirección</th>
-                <td><input type="text" name="lapizzeria_direccion" value="" ></td>
+                <td><input type="text" name="lapizzeria_direccion" value="<?php echo esc_attr(get_option('lapizzeria_direccion')); ?>" ></td>
             </tr>
             <tr valign="top">
                 <th scope="row">Teléfono</th>
-                <td><input type="text" name="lapizzeria_telefono" value="" ></td>
+                <td><input type="text" name="lapizzeria_telefono" value="<?php echo esc_attr(get_option('lapizzeria_telefono')); ?>" ></td>
             </tr>
         </table>
         

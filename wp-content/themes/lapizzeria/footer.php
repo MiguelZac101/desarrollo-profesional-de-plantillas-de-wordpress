@@ -8,6 +8,8 @@
         wp_nav_menu($args);
     ?>
     <div class="ubicacion">
+        <p><?php echo esc_html(get_option('lapizzeria_direccion'));?></p>
+        <p>Teléfono: <?php echo esc_html(get_option('lapizzeria_telefono'));?></p>
         <p>8179 Bay Avenue Mountan View, CA 94043</p>
         <p>Teléfono: +1-92-456-7890</p>
     </div>
