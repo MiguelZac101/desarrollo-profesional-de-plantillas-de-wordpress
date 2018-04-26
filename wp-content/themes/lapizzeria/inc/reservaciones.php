@@ -2,8 +2,7 @@
 
 //https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
 function lapizzeria_guardar() {
-    global $wpdb;
-    $tabla = $wpdb->prefix . "reservaciones";
+    global $wpdb;    
 
     if (isset($_POST['enviar']) && $_POST['oculto'] == 1):
 
@@ -31,9 +30,14 @@ function lapizzeria_guardar() {
 //    '%d' -> cantidad
 //    '%s' -> string
 //    '%f' -> flotante
-
+        
+        $tabla = $wpdb->prefix . "reservaciones";
         $wpdb->insert($tabla, $datos, $formato);
-
+        
+        $url = get_page_by_title("Gracias por su reserva");
+        wp_redirect(get_permalink($url->ID));
+        exit();
+        
     endif;
 }
 
