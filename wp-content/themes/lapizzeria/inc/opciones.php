@@ -16,7 +16,7 @@ function lapizzeria_reservaciones(){
     ?>
 <div class="wrap">
     <h1>Reservaciones</h1>
-    <table class="wp-list-table widefast striped">
+    <table class="wp-list-table widefat fixed striped posts">
         <thead>
             <tr>
                 <th class="manage-column">ID</th>
@@ -30,7 +30,19 @@ function lapizzeria_reservaciones(){
         <tbody>
             <?php global $wpdb;
                 $reservaciones = $wpdb->prefix.'reservaciones';
-                $registros = $wpdb->get_results("SELECT * FROM $reservaciones");
+                $registros = $wpdb->get_results("SELECT * FROM $reservaciones", ARRAY_A);
+                foreach($registros as $registro){
+                ?>
+            <tr>
+                <td><?php echo $registro['id'];?></td>
+                <td><?php echo $registro['nombre'];?></td>
+                <td><?php echo $registro['fecha'];?></td>
+                <td><?php echo $registro['correo'];?></td>
+                <td><?php echo $registro['telefono'];?></td>
+                <td><?php echo $registro['mensaje'];?></td>
+            </tr>
+            <?php
+                }
             ?>
         </tbody>
     </table>
