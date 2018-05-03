@@ -66,6 +66,15 @@
     <?php $url = get_page_by_title('Galería'); ?>
     <?php echo get_post_gallery($url->ID); //imprimiendo galeria?>
 </section>
-
+<section class="ubicacion-reservacion">
+    <div class="contenedor-grid">
+        <div class="columnas2-4">
+            
+        </div>
+        <div class="columnas2-4">
+            <?php get_template_part('templates/formulario','reservacion');?>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
