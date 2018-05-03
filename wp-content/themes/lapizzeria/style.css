@@ -682,3 +682,27 @@ div.contenido-especialidad:hover div.informacion-platillo{
     top: 0;
     opacity: 1;
 }
+/*INGREDIENTES*/
+section.ingredientes{
+    background-image: url(img/bg-ingredientes.jpg);
+    margin-top: 50px;
+    padding-top: 50px;
+    color: #FFFFFF;
+}
+section.ingredientes h3{
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 700;
+}
+section.ingredientes p{
+    line-height: 40px;
+    font-size: 20px;
+}
+section.ingredientes div.imagen{
+    padding-top: 30px;    
+    text-align: center;
+    margin: 0 auto;
+}
+section.ingredientes div.imagen img{
+    width: 80%;
+}
