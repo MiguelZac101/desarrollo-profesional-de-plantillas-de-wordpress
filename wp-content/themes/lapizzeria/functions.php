@@ -13,6 +13,8 @@ function lapizzeria_setup(){
     add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen   
     add_image_size('especialidades',768,515,true);
     
+    add_image_size('especialidades_portrait',435,526,true);
+    
     //cambio de medida de la miniatura que viene por defecto en Wordpress
     update_option('thumbnail_size_w',253);
     update_option('thumbnail_size_h',164);

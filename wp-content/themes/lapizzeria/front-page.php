@@ -8,7 +8,7 @@
         <div class="contenido-hero">
             <div class="texto-hero">
                 <h1><?php bloginfo('description'); ?></h1>
-                <h1><?php // echo esc_html(get_option('blogdescription'));    ?></h1>
+                <h1><?php // echo esc_html(get_option('blogdescription'));     ?></h1>
                 <?php the_content(); ?>
                 <?php $url = get_page_by_title('Nosotros'); ?>
                 <a class="button naranja" href="<?php echo get_permalink($url->ID); ?>" class="button">Leer más</a>
@@ -30,9 +30,18 @@
         while ($especialidades->have_posts()): $especialidades->the_post();
             ?>
             <div class="especialidad columnas1-3">
-                <?php the_title(); ?>
+                <div class="contenido-especialidad">
+                    <?php the_post_thumbnail('especialidades_portrait'); ?>
+                    <div class="informacion-platillo">
+                        <h3><?php the_title(); ?></h3>
+                        <?php                                    the_content();?>
+                        <p class="precio"><?php the_field('precio'); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="button">Leer más</a>
+                    </div>
+                </div>                
             </div>
-        <?php endwhile;
+        <?php
+        endwhile;
         wp_reset_postdata();
         ?>
     </main>
