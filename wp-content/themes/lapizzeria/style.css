@@ -490,6 +490,9 @@ div.comentarios form input[type='submit']{
 .button.rojo{
     background-color: #a61206;
 }
+.rojo{
+    color: #a61206;
+}
 .button.naranja{
     background-color: #f19f30;
 }
