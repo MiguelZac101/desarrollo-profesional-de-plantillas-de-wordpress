@@ -8,7 +8,7 @@
         <div class="contenido-hero">
             <div class="texto-hero">
                 <h1><?php bloginfo('description'); ?></h1>
-                <h1><?php // echo esc_html(get_option('blogdescription'));     ?></h1>
+                <h1><?php // echo esc_html(get_option('blogdescription'));      ?></h1>
                 <?php the_content(); ?>
                 <?php $url = get_page_by_title('Nosotros'); ?>
                 <a class="button naranja" href="<?php echo get_permalink($url->ID); ?>" class="button">Leer más</a>
@@ -34,18 +34,33 @@
                     <?php the_post_thumbnail('especialidades_portrait'); ?>
                     <div class="informacion-platillo">
                         <h3><?php the_title(); ?></h3>
-                        <?php                                    the_content();?>
+                        <?php the_content(); ?>
                         <p class="precio"><?php the_field('precio'); ?></p>
                         <a href="<?php the_permalink(); ?>" class="button">Leer más</a>
                     </div>
                 </div>                
             </div>
-        <?php
+            <?php
         endwhile;
         wp_reset_postdata();
         ?>
     </main>
 </div>
+<section class="ingredientes">
+    <div class="contenedor">
+        <div class="contenedor-grid">
+            <div class="columnas2-4">
+                <?php the_field('contenido');?>
+                <?php $url = get_page_by_title('Nosotros'); ?>
+                <a class="button naranja" href="<?php echo get_permalink($url->ID); ?>" class="button">Leer más</a>
+            </div>
+            <div class="columnas2-4">
+                <img src="<?php the_field('imagen');?>"/>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 
 
