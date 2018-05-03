@@ -8,10 +8,10 @@
         <div class="contenido-hero">
             <div class="texto-hero">
                 <h1><?php bloginfo('description');?></h1>
-                <h1><?php echo esc_html(get_option('blogdescription'));?></h1>
+                <h1><?php // echo esc_html(get_option('blogdescription'));?></h1>
                 <?php the_content();?>
                 <?php $url = get_page_by_title('Nosotros'); ?>
-                <a href="<?php echo get_permalink($url->ID); ?>" class="button">Leer más</a>
+                <a class="button naranja" href="<?php echo get_permalink($url->ID); ?>" class="button">Leer más</a>
             </div>
         </div>
     </div>
