@@ -27,6 +27,17 @@ function lapizzeria_opciones(){
     ?>
 <div class="wrap">
     <h1>Ajustes La Pizzeria</h1>
+    
+    <?php 
+    if(isset($_GET['tab'])):
+        $active_tab = $_GET['tab'];
+    endif;
+    ?>
+    
+    <h2 class="nav-tab-wrapper">
+        <a href="?page=lapizzeria_ajustes&tab=tema" class="nav-tab <?php echo $active_tab == 'tema'?'nav-tab-active':''; ?>">Ajustes</a>
+        <a href="?page=lapizzeria_ajustes&tab=gmaps" class="nav-tab <?php echo $active_tab == 'gmaps'?'nav-tab-active':''; ?>">Google Maps</a>
+    </h2>
     <form action="options.php" method="post">
         <?php settings_fields('lapizzeria_opciones_grupo'); ?>
         <?php do_settings_sections('lapizzeria_opciones_grupo'); ?>
