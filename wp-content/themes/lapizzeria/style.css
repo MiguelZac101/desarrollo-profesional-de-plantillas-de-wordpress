@@ -747,3 +747,7 @@ input[type="datetime-local"]{
     background-color: #a61206;
     display: inline;
 }
+
+#mapa{
+    height: 500px;
+}

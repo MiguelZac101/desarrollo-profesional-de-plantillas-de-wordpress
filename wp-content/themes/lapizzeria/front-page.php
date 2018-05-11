@@ -69,12 +69,27 @@
 <section class="ubicacion-reservacion">
     <div class="contenedor-grid">
         <div class="columnas2-4">
-            
+            <div id="mapa">
+                
+            </div>
         </div>
         <div class="columnas2-4">
             <?php get_template_part('templates/formulario','reservacion');?>
         </div>
     </div>
 </section>
+
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('mapa'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9-68H0rBS1t3VLgOO6pGuXh7LvyCKqtI&callback=initMap"
+    async defer></script>
+
 
 <?php get_footer(); ?>
