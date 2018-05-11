@@ -22,6 +22,23 @@ $(document).ready(function () {
             $('nav.menu-sitio').hide();
         }
     });
+    
+    //Ajustar mapa
+    var mapa = $('#mapa');
+    if(mapa.length > 0){
+        if($(document).width()>=breakpoint){
+            ajustarMapa(0);
+        }else{
+            ajustarMapa(300);
+        }
+    }
+    $(window).resize(function () {
+        if($(document).width()>=breakpoint){
+            ajustarMapa(0);
+        }else{
+            ajustarMapa(300);
+        }
+    });
 
     //FluidBox
     jQuery('.gallery a').each(function () {
@@ -33,3 +50,13 @@ $(document).ready(function () {
 
 });
 
+function ajustarMapa(altura){
+    if(altura==0){
+        var ubicacionSection = $('.ubicacion-reservacion');
+        var ubicacionAltura = ubicacionSection.height();
+        altura = ubicacionAltura;        
+    }
+    
+    $('#mapa').css({'height': altura});
+    
+}
