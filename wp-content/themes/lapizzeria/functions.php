@@ -44,13 +44,23 @@ function lapizzeria_styles(){
     //https://github.com/terrymun/Fluidbox
     wp_register_script('fluidbox',  get_template_directory_uri().'/js/jquery.fluidbox.min.js',array(),'1.0.0',true);
     wp_register_script('scripts',  get_template_directory_uri().'/js/scripts.js',array(),'1.0.0',true);    
+    wp_register_script('maps',  'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9-68H0rBS1t3VLgOO6pGuXh7LvyCKqtI&callback=initMap',array(),'',true); 
     
+    wp_enqueue_script('maps');
     wp_enqueue_script('jquery');
     wp_enqueue_script('fluidbox');
     wp_enqueue_script('scripts');
     
 }
 add_action('wp_enqueue_scripts','lapizzeria_styles');
+
+//agregar async defer
+function agregar_async_defer($tag,$handle){
+    if('maps'!==$handle) return $tag;
+    return str_replace(' src', ' async="async" defer="defer" src', $tag);
+}
+//,,prioridad,n°argumentos
+add_filter('script_loader_tag','agregar_async_defer',10,2);
 
 //Creación de menus
 function lapizzeria_menus(){
