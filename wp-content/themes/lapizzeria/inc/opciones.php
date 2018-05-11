@@ -16,6 +16,11 @@ function lapizzeria_registrar_opciones(){
     //Registrar opciones, una por campo
     register_setting('lapizzeria_opciones_grupo','lapizzeria_direccion');
     register_setting('lapizzeria_opciones_grupo','lapizzeria_telefono');
+    
+    register_setting('lapizzeria_opciones_gmaps','lapizzeria_gmap_latitud');
+    register_setting('lapizzeria_opciones_gmaps','lapizzeria_gmap_longitud');
+    register_setting('lapizzeria_opciones_gmaps','lapizzeria_gmap_zoom');
+    register_setting('lapizzeria_opciones_gmaps','lapizzeria_gmap_apikey');    
 }
 
 function lapizzeria_opciones(){
@@ -35,6 +40,28 @@ function lapizzeria_opciones(){
                 <td><input type="text" name="lapizzeria_telefono" value="<?php echo esc_attr(get_option('lapizzeria_telefono')); ?>" ></td>
             </tr>
         </table>
+        
+        <?php settings_fields('lapizzeria_opciones_gmaps'); ?>
+        <?php do_settings_sections('lapizzeria_opciones_gmaps'); ?>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row">latitud</th>
+                <td><input type="text" name="lapizzeria_gmap_latitud" value="<?php echo esc_attr(get_option('lapizzeria_gmap_latitud')); ?>" ></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">longitud</th>
+                <td><input type="text" name="lapizzeria_gmap_longitud" value="<?php echo esc_attr(get_option('lapizzeria_gmap_longitud')); ?>" ></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">zoom</th>
+                <td><input type="number" name="lapizzeria_gmap_zoom" value="<?php echo esc_attr(get_option('lapizzeria_gmap_zoom')); ?>" ></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">apikey</th>
+                <td><input type="text" name="lapizzeria_gmap_apikey" value="<?php echo esc_attr(get_option('lapizzeria_gmap_apikey')); ?>" ></td>
+            </tr>
+        </table>
+        
         
         <?php submit_button(); ?>
         
