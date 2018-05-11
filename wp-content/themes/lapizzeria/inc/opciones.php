@@ -39,6 +39,9 @@ function lapizzeria_opciones(){
         <a href="?page=lapizzeria_ajustes&tab=gmaps" class="nav-tab <?php echo $active_tab == 'gmaps'?'nav-tab-active':''; ?>">Google Maps</a>
     </h2>
     <form action="options.php" method="post">
+        <?php 
+        if($active_tab == 'tema'){
+        ?>        
         <?php settings_fields('lapizzeria_opciones_grupo'); ?>
         <?php do_settings_sections('lapizzeria_opciones_grupo'); ?>
         <table class="form-table">
@@ -51,6 +54,9 @@ function lapizzeria_opciones(){
                 <td><input type="text" name="lapizzeria_telefono" value="<?php echo esc_attr(get_option('lapizzeria_telefono')); ?>" ></td>
             </tr>
         </table>
+        <?php
+        }else{
+        ?>
         
         <?php settings_fields('lapizzeria_opciones_gmaps'); ?>
         <?php do_settings_sections('lapizzeria_opciones_gmaps'); ?>
@@ -72,7 +78,9 @@ function lapizzeria_opciones(){
                 <td><input type="text" name="lapizzeria_gmap_apikey" value="<?php echo esc_attr(get_option('lapizzeria_gmap_apikey')); ?>" ></td>
             </tr>
         </table>
-        
+        <?php
+        }
+        ?>
         
         <?php submit_button(); ?>
         
