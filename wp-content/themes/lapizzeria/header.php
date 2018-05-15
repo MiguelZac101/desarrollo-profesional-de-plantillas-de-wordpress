@@ -5,6 +5,10 @@
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="La Pizzeria">
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/img/logo.svg">
+        
         <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         
         <?php wp_head(); ?>

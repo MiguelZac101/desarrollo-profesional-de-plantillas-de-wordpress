@@ -135,3 +135,4 @@ function lapizzeria_widgets(){
     ));
 }
 add_action('widgets_init','lapizzeria_widgets');
+
