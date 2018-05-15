@@ -1,10 +1,16 @@
 //https://developers.google.com/maps/
 var map;
 function initMap() {    
-    var latLng = {lat: -12.080615, lng: -77.010815};
+    
+//    console.log(opciones);
+    
+    var latLng = {
+        lat: parseFloat(opciones.latitud), 
+        lng: parseFloat(opciones.longitud)
+    };
     map = new google.maps.Map(document.getElementById('mapa'), {
         center: latLng,
-        zoom: 16
+        zoom: parseInt(opciones.zoom)
     });
     var marker = new google.maps.Marker({
        position: latLng,
@@ -15,7 +21,8 @@ function initMap() {
 
 $ = jQuery.noConflict();
 
-$(document).ready(function () {
+$(document).ready(function () {    
+    
     $('.mobile-menu a').on('click', function () {
         $('nav.menu-sitio').toggle('slow');
     });

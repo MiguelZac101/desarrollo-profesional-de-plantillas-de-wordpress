@@ -44,13 +44,24 @@ function lapizzeria_styles(){
     //https://github.com/terrymun/Fluidbox
     wp_register_script('fluidbox',  get_template_directory_uri().'/js/jquery.fluidbox.min.js',array(),'1.0.0',true);
     wp_register_script('scripts',  get_template_directory_uri().'/js/scripts.js',array(),'1.0.0',true);   
-    $apikey = get_option('lapizzeria_gmap_apikey'); //leer dato desde menu personalizado
+    $apikey = esc_html(get_option('lapizzeria_gmap_apikey')); //leer dato desde menu personalizado
     wp_register_script('maps',  'https://maps.googleapis.com/maps/api/js?key='.$apikey.'&callback=initMap',array(),'',true); 
     
     wp_enqueue_script('maps');
     wp_enqueue_script('jquery');
     wp_enqueue_script('fluidbox');
     wp_enqueue_script('scripts');
+    
+    //PASAR VARIABLES DE PHP A JAVASCRIPT
+    wp_localize_script(
+        'scripts',
+        'opciones',
+        array(
+            'latitud' => get_option('lapizzeria_gmap_latitud'),
+            'longitud' => get_option('lapizzeria_gmap_longitud'),
+            'zoom' => get_option('lapizzeria_gmap_zoom')
+        )
+    );
     
 }
 add_action('wp_enqueue_scripts','lapizzeria_styles');
