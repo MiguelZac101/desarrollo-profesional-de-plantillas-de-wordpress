@@ -591,6 +591,7 @@ form.reserva-contacto h2{
 form.reserva-contacto .campo{
     margin-bottom: 20px;
     width: 100%;
+    position: relative;
 }
 form.reserva-contacto .campo input,
 form.reserva-contacto .campo textarea{
