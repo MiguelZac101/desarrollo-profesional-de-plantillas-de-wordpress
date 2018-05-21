@@ -9,6 +9,7 @@ require get_template_directory().'/inc/opciones.php';
 function lapizzeria_setup(){
     //agregar imagen destacada
     add_theme_support('post-thumbnails');
+    
     //agregar medida de miniatura a las imagenes
     add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen   
     add_image_size('especialidades',768,515,true);
@@ -22,6 +23,15 @@ function lapizzeria_setup(){
     //large_size_w
 }
 add_action('after_setup_theme','lapizzeria_setup');//(nombre del hook, nombre_de_la_funcion)
+
+function lapizzeria_custom_logo(){
+    $logo = array(
+        'height' => 220,
+        'width' => 280
+    );
+    add_theme_support('custom-logo',$logo); // agregar logo
+}
+add_action('after_setup_theme','lapizzeria_custom_logo');
 
 //carga estilos
 function lapizzeria_styles(){
