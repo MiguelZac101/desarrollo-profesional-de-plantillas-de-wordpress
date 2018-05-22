@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/style.css</file>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/templates/formulario-reservacion.php</file>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/header.php</file>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/functions.php</file>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/js/datetime-local-polyfill.min.js</file>
+            <file>file:/home/miguel/proyectos/html/wordpress_plantillas/wp-content/themes/lapizzeria/css/datetime-local-polyfill.css</file>
+        </group>
     </open-files>
 </project-private>
