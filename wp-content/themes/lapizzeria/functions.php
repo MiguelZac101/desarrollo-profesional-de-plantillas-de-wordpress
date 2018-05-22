@@ -9,6 +9,7 @@ require get_template_directory().'/inc/opciones.php';
 function lapizzeria_setup(){
     //agregar imagen destacada
     add_theme_support('post-thumbnails');
+    add_theme_support('title-tag'); //agregar titulo a la página
     
     //agregar medida de miniatura a las imagenes
     add_image_size('nosotros',437,291,true);//nombre,ancho,alto,cortar imagen   
