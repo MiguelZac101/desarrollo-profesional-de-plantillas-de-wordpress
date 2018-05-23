@@ -17,9 +17,14 @@ $(document).ready(function () {
             url: url_eliminar.ajaxurl,
             success: function (data) {
                 var resultado = JSON.parse(data);
-                if(resultado.respuesta == 1){
-                    jQuery("[data-reservaciones='"+resultado.id+"']").parent().parent().remove();
-                }                
+                if (resultado.respuesta == 1) {
+                    jQuery("[data-reservaciones='" + resultado.id + "']").parent().parent().remove();
+                    swal(
+                        'Eliminado!',
+                        'La reservacion se ha eliminado!',
+                        'success'
+                        );
+                }
             }
         });
 
