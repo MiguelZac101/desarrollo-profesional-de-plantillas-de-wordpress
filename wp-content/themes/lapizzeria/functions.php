@@ -91,6 +91,12 @@ add_action('wp_enqueue_scripts','lapizzeria_styles');
 //llamados ajax admin
 function lapizzeria_admin_scripts(){
     wp_enqueue_script('adminjs',  get_template_directory_uri().'/js/admin-ajax.js',array('jquery'),'1.0',true);
+    //Pasar la URL de WP Ajax al adminjs
+    wp_localize_script(
+        'adminjs',
+        'url_eliminar', 
+        array('ajaxurl' => admin_url('admin-ajax.php'))
+    );
 }
 add_action('admin_enqueue_scripts','lapizzeria_admin_scripts');
 

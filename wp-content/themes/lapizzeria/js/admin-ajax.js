@@ -1,5 +1,6 @@
 $ = jQuery.noConflict();
 
 $(document).ready(function(){
-   alert("Funciona!!"); 
+   //Obtener la URL de admin-ajax.php
+   //console.log(url_eliminar.ajaxurl); 
 });
