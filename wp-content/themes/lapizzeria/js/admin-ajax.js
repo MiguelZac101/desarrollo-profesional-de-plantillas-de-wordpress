@@ -6,6 +6,19 @@ $(document).ready(function(){
    $('.borrar_registro').on('click',function(e){
        e.preventDefault();
        var id = $(this).attr('data-reservaciones');
-       console.log(id); 
+       
+       $.ajax({
+          type : 'post',
+          data : {
+              action : 'lapizzeria_eliminar',
+              id : id,
+              tipo : 'eliminar'
+          },
+          url : url_eliminar.ajaxurl,
+          success:function(data){
+              
+          }
+       });
+       
    });
 });
