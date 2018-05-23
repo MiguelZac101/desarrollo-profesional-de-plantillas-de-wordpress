@@ -121,7 +121,7 @@ function lapizzeria_reservaciones(){
                 <td><?php echo $registro['telefono'];?></td>
                 <td><?php echo $registro['mensaje'];?></td>
                 <td>
-                    <a class="borrar_regstro" href="#" data-reservaciones="<?php echo $registro['id'];?>">
+                    <a class="borrar_registro" href="#" data-reservaciones="<?php echo $registro['id'];?>">
                         Eliminar
                     </a>
                 </td>
