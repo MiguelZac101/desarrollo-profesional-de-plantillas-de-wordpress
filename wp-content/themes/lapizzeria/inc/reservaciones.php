@@ -1,5 +1,17 @@
 <?php
 
+//funcion AJAX
+function lapizzeria_eliminar(){
+    if(isset($_POST['tipo'])){
+        if($_POST['tipo'] == 'eliminar'){
+            echo 'si se envio!!!';
+        }
+    }
+    die();
+}
+//wp_ajax_ -> considerar cuando es para ajax
+add_action('wp_ajax_lapizzeria_eliminar','lapizzeria_eliminar');
+
 //https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
 function lapizzeria_guardar() {
     global $wpdb;    
