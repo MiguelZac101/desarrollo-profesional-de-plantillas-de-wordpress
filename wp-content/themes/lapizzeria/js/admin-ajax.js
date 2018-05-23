@@ -16,7 +16,10 @@ $(document).ready(function () {
             },
             url: url_eliminar.ajaxurl,
             success: function (data) {
-                console.log(data); 
+                var resultado = JSON.parse(data);
+                if(resultado.respuesta == 1){
+                    jQuery("[data-reservaciones='"+resultado.id+"']").parent().parent().remove();
+                }                
             }
         });
 
