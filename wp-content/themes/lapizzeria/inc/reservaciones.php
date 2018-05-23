@@ -1,20 +1,40 @@
 <?php
 
 //funcion AJAX
-function lapizzeria_eliminar(){
-    if(isset($_POST['tipo'])){
-        if($_POST['tipo'] == 'eliminar'){
-            echo 'si se envio!!!';
+function lapizzeria_eliminar() {
+    if (isset($_POST['tipo'])) {
+        if ($_POST['tipo'] == 'eliminar') {
+            global $wpdb;
+            $tabla = $wpdb->prefix . 'reservaciones';
+
+            $id_registro = $_POST['id'];
+            $resultado = $wpdb->delete(
+                $tabla, 
+                array('id' => $id_registro), 
+                array('%d') //tipo dato %d decimal %f float $s string
+            );
+            
+            if($resultado == 1){
+                $respuesta = array(
+                    'respuesta' => 1,
+                    'id' => $id_registro
+                );
+            }else{
+                $respuesta = array(
+                    'respuesta' => 'error'
+                );
+            }
         }
     }
-    die();
+    die(json_encode($respuesta));
 }
+
 //wp_ajax_ -> considerar cuando es para ajax
-add_action('wp_ajax_lapizzeria_eliminar','lapizzeria_eliminar');
+add_action('wp_ajax_lapizzeria_eliminar', 'lapizzeria_eliminar');
 
 //https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
 function lapizzeria_guardar() {
-    global $wpdb;    
+    global $wpdb;
 
     if (isset($_POST['enviar']) && $_POST['oculto'] == 1):
 
@@ -42,14 +62,14 @@ function lapizzeria_guardar() {
 //    '%d' -> cantidad
 //    '%s' -> string
 //    '%f' -> flotante
-        
+
         $tabla = $wpdb->prefix . "reservaciones";
         $wpdb->insert($tabla, $datos, $formato);
-        
+
         $url = get_page_by_title("Gracias por su reserva");
         wp_redirect(get_permalink($url->ID));
         exit();
-        
+
     endif;
 }
 
