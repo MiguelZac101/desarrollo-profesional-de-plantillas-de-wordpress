@@ -15,6 +15,9 @@
     <div class="campo">
         <textarea name="mensaje" placeholder="Mensaje" required></textarea>
     </div>
+    
+    <div class="g-recaptcha" data-sitekey="6Lc1YVwUAAAAAGgcF1tfQoFHGfszW8Blh3l4tsI-"></div>
+    
     <input type="submit" name="enviar" class="button">
     <input type="hidden" name="oculto" value="1">
 </form>
